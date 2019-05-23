@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+import guestbook.views as guestbook_views
 import emaillist.views as emaillist_views
 import helloworld.views as helloworld_views
 
@@ -27,6 +28,11 @@ urlpatterns = [
     path('emaillist/', emaillist_views.index),
     path('emaillist/form', emaillist_views.form),
     path('emaillist/add', emaillist_views.add),
+
+    path('guestbook/', guestbook_views.index),
+    path('guestbook/add', guestbook_views.add),
+    path('guestbook/deleteform', guestbook_views.deleteform),
+    path('guestbook/delete', guestbook_views.delete),
 
     path('admin/', admin.site.urls),
 ]

@@ -1,11 +1,10 @@
-{% load mathfilters %}
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>방명록</title>
 </head>
 <body>
-	<form action="/guestbook/add" method="post">
+	<form action="/guestbook/add" method="post">{% csrf_token %}
 		<table border=1 width=500>
 			<tr>
 				<td>이름</td><td><input type="text" name="name"></td>
